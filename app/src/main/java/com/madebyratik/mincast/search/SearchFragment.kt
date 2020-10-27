@@ -27,7 +27,7 @@ class SearchFragment : Fragment() {
                     Text(
                         text = "Search",
                         style = MaterialTheme.typography.h1,
-                        modifier = Modifier.padding(horizontal = 16.dp).fillMaxWidth()
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp).fillMaxWidth()
                     )
                 }
             }

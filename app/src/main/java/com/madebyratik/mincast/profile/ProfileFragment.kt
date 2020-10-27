@@ -27,7 +27,7 @@ class ProfileFragment : Fragment() {
                     Text(
                         text = "Profile",
                         style = MaterialTheme.typography.h1,
-                        modifier = Modifier.padding(horizontal = 16.dp).fillMaxWidth()
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp).fillMaxWidth()
                     )
                 }
             }

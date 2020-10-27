@@ -12,9 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import com.madebyratik.mincast.data.LocalPodcastRepo
 import com.madebyratik.mincast.theme.MinCastTheme
 
 class ExploreFragment : Fragment() {
+
+    private val viewModel = ExploreViewModel(podcastRepo = LocalPodcastRepo())
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,10 +29,9 @@ class ExploreFragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 MinCastTheme {
-                    Text(
-                        text = "Explore",
-                        style = MaterialTheme.typography.h1,
-                        modifier = Modifier.padding(horizontal = 16.dp).fillMaxWidth()
+                    ExploreScreen(
+                        popularShows = viewModel.getPopularPodcasts(),
+                        recommendedEpisodes = viewModel.getRecommendedEpisodes()
                     )
                 }
             }

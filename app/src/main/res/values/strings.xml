@@ -4,4 +4,6 @@
     <string name="saved_label">Saved</string>
     <string name="search_label">Search</string>
     <string name="profile_label">Profile</string>
+    <string name="popular_shows_label">Popular Shows</string>
+    <string name="recommended_label">Recommended</string>
 </resources>
