@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/explore_fragment"
+        android:icon="@drawable/ic_explore"
+        android:orderInCategory="1"
+        android:title="@string/explore_label" />
+
+    <item
+        android:id="@+id/saved_fragment"
+        android:icon="@drawable/ic_saved"
+        android:orderInCategory="2"
+        android:title="@string/saved_label" />
+
+    <item
+        android:id="@+id/search_fragment"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="3"
+        android:title="@string/search_label" />
+
+    <item
+        android:id="@+id/profile_fragment"
+        android:icon="@drawable/ic_profile"
+        android:orderInCategory="4"
+        android:title="@string/profile_label" />
+
+</menu>

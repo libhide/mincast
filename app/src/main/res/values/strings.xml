@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MinCast</string>
+    <string name="explore_label">Explore</string>
+    <string name="saved_label">Saved</string>
+    <string name="search_label">Search</string>
+    <string name="profile_label">Profile</string>
 </resources>
