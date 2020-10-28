@@ -5,6 +5,8 @@ import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRowFor
+import androidx.compose.foundation.text.FirstBaseline
+import androidx.compose.foundation.text.LastBaseline
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -32,7 +34,7 @@ fun ExploreScreen(popularShows: List<Podcast>, recommendedEpisodes: List<Episode
             ExploreHeading()
             PopularShowsSubheading()
             PopularShowsCarousel(shows = popularShows)
-            RecommendedSubheading()
+            RecommendedHeader()
             RecommendedEpisodesCarousel(episodes = recommendedEpisodes)
         }
     }
@@ -95,13 +97,26 @@ private fun PopularShowsCarousel(shows: List<Podcast>) {
 }
 
 @Composable
-private fun RecommendedSubheading() {
+private fun RecommendedHeader() {
     val context = ContextAmbient.current
-    Text(
-        text = context.getString(R.string.recommended_label),
-        style = MaterialTheme.typography.h2,
-        modifier = Modifier.padding(horizontal = 16.dp).fillMaxWidth()
-    )
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween,
+        modifier = Modifier
+            .padding(horizontal = 16.dp)
+            .fillMaxWidth()
+    ) {
+        Text(
+            text = context.getString(R.string.recommended_label),
+            style = MaterialTheme.typography.h2
+        )
+        TextButton(
+            onClick = {},
+            modifier = Modifier
+        ) {
+            Text(text = context.getString(R.string.show_all_label))
+        }
+    }
 }
 
 @Composable
@@ -149,8 +164,8 @@ private fun RecommendedEpisodesCarousel(episodes: List<Episode>) {
 fun ExploreScreenPreview() {
     MinCastTheme {
         ExploreScreen(
-            popularShows = emptyList(),
-            recommendedEpisodes = emptyList()
+            popularShows = podcasts,
+            recommendedEpisodes = episodes
         )
     }
 }

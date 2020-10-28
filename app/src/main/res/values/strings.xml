@@ -6,4 +6,5 @@
     <string name="profile_label">Profile</string>
     <string name="popular_shows_label">Popular Shows</string>
     <string name="recommended_label">Recommended</string>
+    <string name="show_all_label">SHOW ALL</string>
 </resources>
