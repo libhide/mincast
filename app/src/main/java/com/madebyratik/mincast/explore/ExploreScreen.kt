@@ -4,22 +4,25 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumnFor
 import androidx.compose.foundation.lazy.LazyRowFor
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.ContextAmbient
+import androidx.compose.ui.platform.TextToolbarAmbient
 import androidx.compose.ui.res.imageResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
 import com.madebyratik.mincast.R
 import com.madebyratik.mincast.data.entities.Episode
 import com.madebyratik.mincast.data.entities.Podcast
+import com.madebyratik.mincast.data.episodes
+import com.madebyratik.mincast.data.podcasts
 import com.madebyratik.mincast.theme.MinCastTheme
 
 @Composable
@@ -74,7 +77,9 @@ private fun PopularShow(show: Podcast) {
             text = show.name,
             maxLines = 2,
             style = MaterialTheme.typography.h3,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .height(54.dp)
+                .fillMaxWidth()
         )
     }
 }
@@ -83,7 +88,7 @@ private fun PopularShow(show: Podcast) {
 private fun PopularShowsCarousel(shows: List<Podcast>) {
     LazyRowFor(
         items = shows,
-        modifier = Modifier.padding(start = 6.dp, top = 12.dp, bottom = 12.dp),
+        modifier = Modifier.padding(start = 6.dp, top = 12.dp, bottom = 16.dp),
     ) { show ->
         PopularShow(show = show)
     }
@@ -133,7 +138,7 @@ private fun RecommendedEpisode(episode: Episode) {
 private fun RecommendedEpisodesCarousel(episodes: List<Episode>) {
     LazyRowFor(
         items = episodes,
-        modifier = Modifier.padding(start = 6.dp, top = 12.dp, bottom = 12.dp),
+        modifier = Modifier.padding(start = 6.dp, top = 12.dp),
     ) { episode ->
         RecommendedEpisode(episode = episode)
     }
@@ -153,10 +158,7 @@ fun ExploreScreenPreview() {
 @Preview("Popular show card")
 @Composable
 fun PopularShowCardPreview() {
-    val testPod = Podcast(
-        name = "David Tennant Does a Podcast With...",
-        thumbnailResId = R.drawable.thumb_david_tennant
-    )
+    val testPod = podcasts.first()
 
     MinCastTheme {
         Surface {
@@ -168,12 +170,7 @@ fun PopularShowCardPreview() {
 @Preview("Recommended episode card")
 @Composable
 fun RecommendedEpisodeCardPreview() {
-    val testEpisode = Episode(
-        name = "Language with a Capital L",
-        duration = 51,
-        publishDelta = "1d",
-        artworkResId = R.drawable.artwork_unbox
-    )
+    val testEpisode = episodes.first()
 
     MinCastTheme {
         Surface {
