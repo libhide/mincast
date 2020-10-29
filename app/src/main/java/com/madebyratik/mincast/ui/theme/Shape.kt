@@ -1,4 +1,4 @@
-package com.madebyratik.mincast.theme
+package com.madebyratik.mincast.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

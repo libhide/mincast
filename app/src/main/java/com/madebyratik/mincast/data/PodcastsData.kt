@@ -1,23 +1,8 @@
 package com.madebyratik.mincast.data
 
 import com.madebyratik.mincast.R
-import com.madebyratik.mincast.data.entities.Episode
-import com.madebyratik.mincast.data.entities.Podcast
-
-class LocalPodcastRepo : PodcastRepo {
-
-    override fun getPopularPodcasts(): List<Podcast> {
-        return podcasts
-    }
-
-    override fun getRecommendedEpisodes(): List<Episode> {
-        return episodes
-    }
-}
-
-/**
- * Static data
- */
+import com.madebyratik.mincast.model.Episode
+import com.madebyratik.mincast.model.Podcast
 
 val podcasts = listOf(
     Podcast(name = "Waveform", thumbnailResId = R.drawable.thumb_waveform),

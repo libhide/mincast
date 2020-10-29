@@ -1,9 +1,9 @@
 package com.madebyratik.mincast.data
 
-import com.madebyratik.mincast.data.entities.Episode
-import com.madebyratik.mincast.data.entities.Podcast
+import com.madebyratik.mincast.model.Episode
+import com.madebyratik.mincast.model.Podcast
 
-interface PodcastRepo {
+interface PodcastsRepo {
     fun getPopularPodcasts(): List<Podcast>
     fun getRecommendedEpisodes(): List<Episode>
 }

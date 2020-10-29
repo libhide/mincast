@@ -1,4 +1,4 @@
-package com.madebyratik.mincast.data.entities
+package com.madebyratik.mincast.model
 
 data class Podcast(
     val name: String,

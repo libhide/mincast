@@ -1,4 +1,4 @@
-package com.madebyratik.mincast.saved
+package com.madebyratik.mincast.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,9 +15,9 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import com.madebyratik.mincast.R
-import com.madebyratik.mincast.theme.MinCastTheme
+import com.madebyratik.mincast.ui.theme.MinCastTheme
 
-class SavedFragment : Fragment() {
+class ProfileFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,14 +27,7 @@ class SavedFragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 MinCastTheme {
-                    Surface(modifier = Modifier.fillMaxSize()) {
-                        Text(
-                            text = getString(R.string.saved_label),
-                            style = MaterialTheme.typography.h1,
-                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp)
-                                .fillMaxWidth()
-                        )
-                    }
+                    ProfileScreen()
                 }
             }
         }
