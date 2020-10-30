@@ -6,3 +6,7 @@ Toy app to help learn Jetpack Compose.
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 <img src="https://i.postimg.cc/nLwpSnn0/Art.jpg" alt="Screenshot of the app on the left, Jetpack Compose logo on the right" />
+
+## Design Credit
+
+YesYou Studio's Podcast app [mockup](https://dribbble.com/shots/13926718-Podcast-App) from Dribbble was used as a starting point for Mincast's design.
