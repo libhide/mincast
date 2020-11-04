@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ContextAmbient
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import androidx.ui.tooling.preview.Preview
 import com.madebyratik.mincast.R
 import com.madebyratik.mincast.model.Episode
@@ -18,7 +19,16 @@ import com.madebyratik.mincast.ui.components.*
 import com.madebyratik.mincast.ui.theme.MinCastTheme
 
 @Composable
-fun ExploreScreen(podcasts: List<Podcast>, recommendedEpisodes: List<Episode>) {
+fun ExploreScreen(
+    navController: NavController,
+    podcasts: List<Podcast>,
+    recommendedEpisodes: List<Episode>
+) {
+    Explore(podcasts = podcasts, recommendedEpisodes = recommendedEpisodes)
+}
+
+@Composable
+fun Explore(podcasts: List<Podcast>, recommendedEpisodes: List<Episode>) {
     val context = ContextAmbient.current
     val title = context.getString(R.string.explore_label)
     val popularShowsTitle = context.getString(R.string.popular_shows_label)
@@ -55,7 +65,7 @@ fun ExploreScreen(podcasts: List<Podcast>, recommendedEpisodes: List<Episode>) {
 @Composable
 fun ExploreScreenPreview() {
     MinCastTheme {
-        ExploreScreen(
+        Explore(
             podcasts = podcasts,
             recommendedEpisodes = episodes
         )
@@ -66,7 +76,7 @@ fun ExploreScreenPreview() {
 @Composable
 fun ExploreScreenDarkPreview() {
     MinCastTheme(darkTheme = true) {
-        ExploreScreen(
+        Explore(
             podcasts = podcasts,
             recommendedEpisodes = episodes
         )

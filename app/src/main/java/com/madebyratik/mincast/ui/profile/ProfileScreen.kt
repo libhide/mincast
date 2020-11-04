@@ -9,13 +9,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ContextAmbient
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import androidx.ui.tooling.preview.Preview
 import com.madebyratik.mincast.R
 import com.madebyratik.mincast.ui.components.ScreenTitle
 import com.madebyratik.mincast.ui.theme.MinCastTheme
 
 @Composable
-fun ProfileScreen() {
+fun ProfileScreen(navController: NavController) {
+    Profile()
+}
+
+@Composable
+fun Profile() {
     val context = ContextAmbient.current
     val title = context.getString(R.string.profile_label)
 
@@ -31,7 +37,7 @@ fun ProfileScreen() {
 @Composable
 fun ProfileScreenPreview() {
     MinCastTheme {
-        ProfileScreen()
+        Profile()
     }
 }
 
@@ -39,6 +45,6 @@ fun ProfileScreenPreview() {
 @Composable
 fun ProfileScreenDarkPreview() {
     MinCastTheme(darkTheme = true) {
-        ProfileScreen()
+        Profile()
     }
 }

@@ -7,13 +7,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ContextAmbient
+import androidx.navigation.NavController
 import androidx.ui.tooling.preview.Preview
 import com.madebyratik.mincast.R
 import com.madebyratik.mincast.ui.components.ScreenTitle
 import com.madebyratik.mincast.ui.theme.MinCastTheme
 
 @Composable
-fun SavedScreen() {
+fun SavedScreen(navController: NavController) {
+    Saved()
+}
+
+@Composable
+fun Saved() {
     val context = ContextAmbient.current
     val title = context.getString(R.string.saved_label)
 
@@ -29,7 +35,7 @@ fun SavedScreen() {
 @Composable
 fun SavedScreenPreview() {
     MinCastTheme {
-        SavedScreen()
+        Saved()
     }
 }
 
@@ -37,6 +43,6 @@ fun SavedScreenPreview() {
 @Composable
 fun SavedScreenDarkPreview() {
     MinCastTheme(darkTheme = true) {
-        SavedScreen()
+        Saved()
     }
 }
