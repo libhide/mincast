@@ -2,8 +2,10 @@ package com.madebyratik.mincast.ui.profile
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ContextAmbient
 import androidx.compose.ui.unit.dp
@@ -18,7 +20,10 @@ fun ProfileScreen() {
     val title = context.getString(R.string.profile_label)
 
     Surface(modifier = Modifier.fillMaxSize()) {
-        ScreenTitle(text = title)
+        ScreenTitle(
+            text = title,
+            modifier = Modifier.wrapContentSize(align = Alignment.TopStart)
+        )
     }
 }
 

@@ -37,7 +37,6 @@ fun PodcastItem(podcast: Podcast, modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.h3,
             modifier = Modifier
                 .height(54.dp)
-                .fillMaxWidth()
         )
     }
 }

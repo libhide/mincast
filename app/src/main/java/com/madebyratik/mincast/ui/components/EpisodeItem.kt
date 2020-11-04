@@ -37,13 +37,13 @@ fun EpisodeItem(episode: Episode, modifier: Modifier = Modifier) {
             text = episode.name,
             maxLines = 1,
             style = MaterialTheme.typography.subtitle1,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
         )
         Text(
             text = episode.metadata(),
             maxLines = 1,
             style = MaterialTheme.typography.subtitle2,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
         )
     }
 }
