@@ -19,6 +19,5 @@ fun ScreenTitle(
         style = MaterialTheme.typography.h1,
         modifier = modifier
             .padding(vertical = 16.dp, horizontal = 16.dp)
-            .fillMaxWidth()
     )
 }

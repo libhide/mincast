@@ -1,8 +1,10 @@
 package com.madebyratik.mincast.ui.search
 
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ContextAmbient
 import androidx.ui.tooling.preview.Preview
@@ -16,7 +18,10 @@ fun SearchScreen() {
     val title = context.getString(R.string.search_label)
 
     Surface(modifier = Modifier.fillMaxSize()) {
-        ScreenTitle(text = title)
+        ScreenTitle(
+            text = title,
+            modifier = Modifier.wrapContentSize(align = Alignment.TopStart)
+        )
     }
 }
 
