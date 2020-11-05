@@ -1,7 +1,7 @@
 # Mincast
 Toy app to help learn Jetpack Compose.
 
-![Compose](https://img.shields.io/badge/Compose-1.0.0--alpha04-brightgreen)
+![Compose](https://img.shields.io/badge/Compose-1.0.0--alpha06-brightgreen)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
