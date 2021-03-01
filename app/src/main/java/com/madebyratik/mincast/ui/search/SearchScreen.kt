@@ -6,9 +6,9 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.ContextAmbient
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import androidx.ui.tooling.preview.Preview
 import com.madebyratik.mincast.R
 import com.madebyratik.mincast.ui.components.ScreenTitle
 import com.madebyratik.mincast.ui.theme.MinCastTheme
@@ -20,7 +20,7 @@ fun SearchScreen(navController: NavController) {
 
 @Composable
 fun Search() {
-    val context = ContextAmbient.current
+    val context = LocalContext.current
     val title = context.getString(R.string.search_label)
 
     Surface(modifier = Modifier.fillMaxSize()) {

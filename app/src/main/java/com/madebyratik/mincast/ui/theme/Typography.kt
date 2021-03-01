@@ -2,17 +2,17 @@ package com.madebyratik.mincast.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.font.font
-import androidx.compose.ui.text.font.fontFamily
 import androidx.compose.ui.unit.sp
 import com.madebyratik.mincast.R
 
-val PoppinsFontFamily = fontFamily(
-    font(R.font.poppins_regular),
-    font(R.font.poppins_medium, FontWeight.Medium),
-    font(R.font.poppins_semibold, FontWeight.SemiBold),
-    font(R.font.poppins_bold, FontWeight.Bold),
+val PoppinsFontFamily = FontFamily(
+    Font(R.font.poppins_regular),
+    Font(R.font.poppins_medium, FontWeight.Medium),
+    Font(R.font.poppins_semibold, FontWeight.SemiBold),
+    Font(R.font.poppins_bold, FontWeight.Bold),
 )
 
 val Typography = Typography(

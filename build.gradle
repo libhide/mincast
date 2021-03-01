@@ -1,11 +1,20 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
-        compose_version = '1.0.0-alpha06'
-        nav_compose_version = "1.0.0-alpha01"
-    }
+        gradle_version = '7.0.0-alpha08'
 
-    ext.kotlin_version = "1.4.10"
+        kotlin_version = '1.4.30'
+
+        appcompat_version = '1.2.0'
+        core_ktx_version = '1.3.2'
+        material_version = '1.3.0'
+
+        lifecycle_version = '2.3.0'
+
+        compose_version = '1.0.0-beta01'
+
+        nav_compose_version = "1.0.0-alpha08"
+        nav_version = "2.3.3"
+    }
 
     repositories {
         google()
@@ -13,15 +22,12 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.0-alpha08'
+        classpath "com.android.tools.build:gradle:$gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
-allprojects {
+subprojects {
     repositories {
         google()
         jcenter()

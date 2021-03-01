@@ -1,12 +1,9 @@
 package com.madebyratik.mincast
 
-import androidx.compose.foundation.Text
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationItem
-import androidx.compose.material.Icon
-import androidx.compose.material.Scaffold
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.navigation.compose.*
@@ -38,8 +35,13 @@ fun MinCastApp() {
 
                     navItems.forEach { screen ->
                         BottomNavigationItem(
-                            icon = { Icon(vectorResource(screen.iconIdRes)) },
-                            label = { Text(stringResource(screen.resourceId)) },
+                            icon = {
+                                Icon(
+                                    imageVector = ImageVector.vectorResource(id = screen.iconIdRes),
+                                    contentDescription = screen.route
+                                )
+                            },
+                            label = { Text(text = stringResource(id = screen.resourceId)) },
                             selected = currentRoute == screen.route,
                             onClick = {
                                 // This is the equivalent to popUpTo the start destination
